@@ -1,0 +1,383 @@
+/* ── Invite banner (shared) ── */
+.inviteBanner {
+  border: 1px solid #bdeed9;
+  background: #ebfff6;
+  border-radius: 14px;
+  padding: 11px 12px;
+  margin-bottom: 14px;
+}
+
+.inviteBanner p {
+  color: #115f43;
+  font-weight: 700;
+}
+
+.inviteBanner small {
+  margin-top: 4px;
+  color: #1c7a57;
+  display: block;
+}
+
+/* ── Signup card ── */
+.card {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 24px;
+  border: 1px solid #dae4dc;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(22, 31, 45, 0.08);
+  padding: 32px;
+}
+
+.signupHeader {
+  margin-bottom: 4px;
+}
+
+.signupHeader h1 {
+  font-size: 2.1rem;
+  line-height: 1.12;
+  color: #0f1a2a;
+  font-weight: 800;
+}
+
+.signupHeader p {
+  margin-top: 10px;
+  color: #5b6878;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.greenText {
+  color: #14b870;
+}
+
+/* ── Shared form ── */
+.form {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #2f3950;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  min-height: 44px;
+  border: 1.5px solid #d4dde6;
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 0.93rem;
+  color: #182236;
+  background: #f8fafc;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #14b870;
+  box-shadow: 0 0 0 3px rgba(20, 184, 112, 0.14);
+  background: #fff;
+}
+
+/* Password label row */
+.passwordLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showPasswordBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4f6878;
+  padding: 0;
+  line-height: 1;
+}
+
+.forgotLink {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #14b870;
+  text-decoration: none;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+/* Password strength */
+.strengthContainer {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.strengthBars {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.strengthBar {
+  height: 4px;
+  flex: 1;
+  border-radius: 2px;
+  background: #e2e8f0;
+  transition: background 0.2s;
+}
+
+.s1 { background: #ef4444; }
+.s2 { background: #f97316; }
+.s3 { background: #eab308; }
+.s4 { background: #22c55e; }
+.s5 { background: #16a34a; }
+
+.strengthLabel {
+  font-size: 0.74rem;
+  color: #728096;
+  white-space: nowrap;
+}
+
+/* Checkbox */
+.checkboxLabel {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 9px !important;
+  font-size: 0.83rem !important;
+  font-weight: 400 !important;
+  color: #4f5b71 !important;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  min-height: unset !important;
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  border: 1.5px solid #c5d0db;
+  border-radius: 4px;
+  accent-color: #14b870;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.termsLink {
+  color: #0e8057;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.termsLink:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.submitButton {
+  margin-top: 4px;
+  border: 0;
+  min-height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(130deg, #10a060, #2ed98a);
+  transition: opacity 0.15s, transform 0.1s;
+  letter-spacing: 0.01em;
+}
+
+.submitButton:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Switch text */
+.switchText {
+  margin-top: 16px;
+  color: #556176;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.switchText a {
+  color: #0e8057;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.switchText a:hover {
+  text-decoration: underline;
+}
+
+/* Messages */
+.errorText,
+.infoText {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.errorText { color: #bc3343; }
+.infoText { color: #166a48; }
+
+/* ── Signin card ── */
+.signinCard {
+  width: min(430px, 100%);
+  border-radius: 24px;
+  border: 1px solid #e0e8e2;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(22, 31, 45, 0.1);
+  padding: 36px 40px 32px;
+}
+
+.signinLogo {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 22px;
+  letter-spacing: -0.3px;
+}
+
+.signinLogoBlack { color: #0f1a2a; }
+.signinLogoGreen { color: #14b870; }
+
+.signinHeader {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.signinHeader h1 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #0f1a2a;
+}
+
+.signinHeader p {
+  margin-top: 6px;
+  color: #5b6878;
+  font-size: 0.9rem;
+}
+
+/* Icon input */
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWithIcon input {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  color: #9babbf;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9babbf;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.15s;
+}
+
+.eyeButton:hover {
+  color: #4f5b71;
+}
+
+.eyeButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Divider */
+.divider {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9babbf;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e8eef2;
+}
+
+/* Social buttons */
+.socialButtons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  border-radius: 12px;
+  border: 1.5px solid #dce4ec;
+  background: #fff;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: #2f3950;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.socialButton:hover:not(:disabled) {
+  background: #f7f9fb;
+  border-color: #c4d0dc;
+}
+
+.socialButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

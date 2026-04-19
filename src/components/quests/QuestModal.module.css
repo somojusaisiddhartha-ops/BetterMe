@@ -1,0 +1,308 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(8, 16, 28, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  width: min(960px, 100%);
+  max-height: calc(100dvh - 40px);
+  border-radius: 26px;
+  border: 1px solid #dce6ee;
+  background: #fff;
+  box-shadow: 0 32px 56px rgba(8, 16, 28, 0.22);
+  padding: 28px;
+  overflow-y: auto;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.topRow h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.03em;
+}
+
+.closeButton {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f0f4f7;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.closeButton:hover {
+  background: #e4edf4;
+}
+
+.contentGrid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+}
+
+.leftColumn {
+  display: grid;
+  gap: 18px;
+}
+
+.label {
+  display: grid;
+  gap: 8px;
+  color: #2f3d52;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.label input {
+  min-height: 48px;
+  border: 1.5px solid #dce6ee;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 0.95rem;
+  color: #1e2d3e;
+  background: #f8fafc;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.label input:focus {
+  outline: none;
+  border-color: #1bbc84;
+  box-shadow: 0 0 0 3px rgba(27, 188, 132, 0.14);
+  background: #fff;
+}
+
+.section p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f3d52;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.optionGrid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.optionGrid button,
+.dayGrid button,
+.difficultyOptions button {
+  min-height: 42px;
+  border-radius: 12px;
+  border: 1.5px solid #dce6ee;
+  background: #f6f9fb;
+  color: #2f3a50;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.optionGrid button:hover,
+.dayGrid button:hover,
+.difficultyOptions button:hover {
+  background: #edf3f8;
+  border-color: #c0d0df;
+}
+
+.customCategoryInput {
+  margin-top: 10px;
+  width: 100%;
+  min-height: 44px;
+  border: 1.5px solid #1bbc84;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 0.9rem;
+  color: #1e2d3e;
+  background: #f0fdf8;
+  box-shadow: 0 0 0 3px rgba(27, 188, 132, 0.1);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.customCategoryInput:focus {
+  outline: none;
+  border-color: #0ea86e;
+  box-shadow: 0 0 0 3px rgba(27, 188, 132, 0.18);
+}
+
+.optionActive,
+.dayActive,
+.difficultyActive {
+  border-color: #14a671 !important;
+  background: #e4f8ef !important;
+  color: #0c6c4a !important;
+}
+
+.dayGrid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.stakesPanel {
+  border: 1.5px solid #e2eaf1;
+  border-radius: 20px;
+  background: #f6f9fb;
+  padding: 18px;
+}
+
+.stakesPanel h3 {
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.stakesPanel p {
+  margin-top: 8px;
+  color: #546074;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.difficultyOptions {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.difficultyOptions button {
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 14px;
+  gap: 2px;
+}
+
+.difficultyOptions button small {
+  color: #6b7a8d;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.rewardBox {
+  margin-top: 14px;
+  border: 1.5px dashed #c8d8e4;
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px;
+}
+
+.rewardBox h4 {
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+  color: #2a3a50;
+}
+
+.rewardBox p {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #546074;
+}
+
+.errorText {
+  margin-top: 12px;
+  color: #bb3747;
+  font-size: 0.88rem;
+}
+
+.footerRow {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelButton,
+.submitButton {
+  min-height: 46px;
+  border-radius: 12px;
+  border: 0;
+  padding: 0 22px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.92rem;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.cancelButton {
+  border: 1.5px solid #dce6ee;
+  background: #f6f9fb;
+  color: #2f3a50;
+}
+
+.cancelButton:hover {
+  background: #edf3f8;
+}
+
+.submitButton {
+  background: linear-gradient(130deg, #0f9068, #38cc92);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(27, 188, 132, 0.3);
+}
+
+.submitButton:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 860px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .overlay {
+    align-items: flex-start;
+    padding: 12px 12px calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .modal {
+    max-height: calc(100dvh - 24px - env(safe-area-inset-bottom));
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .optionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dayGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

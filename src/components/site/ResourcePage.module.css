@@ -1,0 +1,259 @@
+.page {
+  position: relative;
+  min-height: 100dvh;
+  padding: 28px 24px 72px;
+  overflow: clip;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(720px 420px at 0% 0%, rgba(27, 188, 132, 0.14), transparent 58%),
+    radial-gradient(680px 420px at 100% 18%, rgba(255, 182, 128, 0.18), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.header,
+.hero,
+.contentGrid {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 36px;
+}
+
+.brand {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--accent-strong);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navLink,
+.inlineLink {
+  color: #425069;
+  font-weight: 700;
+}
+
+.navButton,
+.sidebarLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 999px;
+  padding: 0 18px;
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 12px 24px rgba(16, 163, 106, 0.2);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.hero {
+  padding: 10px 0 28px;
+}
+
+.eyebrow,
+.sidebarLabel,
+.metaPill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  padding: 8px 12px;
+  background: rgba(27, 188, 132, 0.12);
+  color: var(--accent-strong);
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin-top: 18px;
+  font-size: clamp(2.7rem, 7vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.hero p {
+  max-width: 720px;
+  margin-top: 18px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #4e5a70;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.metaPill {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(208, 217, 227, 0.9);
+  color: #556175;
+  letter-spacing: 0.04em;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.72fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.article,
+.sidebarCard,
+.noteCard {
+  border-radius: 28px;
+  border: 1px solid rgba(214, 221, 227, 0.95);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 251, 252, 0.94));
+  box-shadow: var(--shadow-strong);
+}
+
+.article {
+  padding: 14px 28px;
+}
+
+.section {
+  padding: 26px 0;
+}
+
+.section + .section {
+  border-top: 1px solid rgba(220, 230, 238, 0.92);
+}
+
+.section h2,
+.sidebarCard h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.section p,
+.noteCard p,
+.sidebarCard p {
+  color: #526076;
+  line-height: 1.78;
+}
+
+.section p + p {
+  margin-top: 12px;
+}
+
+.bulletList {
+  margin-top: 14px;
+  padding-left: 20px;
+  color: #2b3648;
+}
+
+.bulletList li + li {
+  margin-top: 10px;
+}
+
+.sidebar {
+  display: grid;
+  gap: 18px;
+}
+
+.sidebarCard,
+.noteCard {
+  padding: 24px;
+}
+
+.sidebarLabel {
+  margin-bottom: 14px;
+  color: #7b8797;
+  background: rgba(237, 241, 244, 0.96);
+  padding: 7px 10px;
+}
+
+.linkList {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.sidebarLink {
+  justify-content: flex-start;
+}
+
+.noteCard {
+  background: linear-gradient(180deg, rgba(238, 246, 242, 0.98), rgba(255, 255, 255, 0.94));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navButton:hover,
+  .sidebarLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(16, 163, 106, 0.24);
+  }
+
+  .navLink:hover,
+  .inlineLink:hover {
+    color: #23304a;
+  }
+}
+
+@media (max-width: 920px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 22px 16px 56px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 28px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .article,
+  .sidebarCard,
+  .noteCard {
+    border-radius: 24px;
+  }
+
+  .article {
+    padding: 8px 18px;
+  }
+
+  .sidebarCard,
+  .noteCard {
+    padding: 20px;
+  }
+}

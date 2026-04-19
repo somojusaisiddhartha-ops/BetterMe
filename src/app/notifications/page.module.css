@@ -1,0 +1,107 @@
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.actions button {
+  min-height: 42px;
+  border-radius: 12px;
+  border: 1.5px solid #dce6ee;
+  background: #f6f9fb;
+  color: #2f3d52;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.actions button:hover {
+  background: #edf3f8;
+  border-color: #c0d0df;
+}
+
+.actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  background: #f6f9fb;
+  border-color: #dce6ee;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.unreadCard,
+.readCard {
+  border-radius: 18px;
+  border: 1px solid #e2eaf1;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(16, 24, 36, 0.05);
+  transition: box-shadow 0.15s;
+}
+
+.unreadCard {
+  border-color: #9fdac4;
+  background: linear-gradient(135deg, #f0fdf7, #e8faf3);
+  box-shadow: 0 4px 16px rgba(27, 188, 132, 0.08);
+}
+
+.readCard {
+  opacity: 0.8;
+}
+
+.readCard:hover,
+.unreadCard:hover {
+  box-shadow: 0 8px 22px rgba(16, 24, 36, 0.09);
+}
+
+.list h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.list p {
+  margin-top: 6px;
+  color: #546074;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.list small {
+  margin-top: 10px;
+  display: inline-block;
+  color: #0f7a54;
+  font-weight: 700;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.emptyText {
+  margin-top: 14px;
+  color: #6b7a8d;
+  font-size: 0.9rem;
+  border: 1px dashed #d5e1eb;
+  border-radius: 18px;
+  background: #f8fbfd;
+  padding: 20px;
+}
+
+@media (max-width: 640px) {
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .actions button {
+    flex: 1 1 160px;
+  }
+
+  .unreadCard,
+  .readCard {
+    padding: 18px;
+  }
+}

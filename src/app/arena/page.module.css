@@ -1,0 +1,238 @@
+.filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 20px;
+  padding: 18px 24px;
+  box-shadow: 0 4px 16px rgba(16, 24, 36, 0.05);
+  margin-bottom: 20px;
+}
+
+.filters span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #52617a;
+}
+
+.filters button {
+  min-height: 36px;
+  border-radius: 999px;
+  border: 1px solid #dce6ee;
+  background: #f6f9fb;
+  color: #455068;
+  font-size: 0.83rem;
+  font-weight: 700;
+  padding: 0 14px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.filters button:hover {
+  background: #edf3f8;
+  border-color: #c0d0df;
+}
+
+.activeFilter {
+  border-color: #14a773 !important;
+  background: #e4f8ef !important;
+  color: #0c6d4e !important;
+}
+
+.currentUserCard {
+  border: 1px solid #e0e8f0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(16, 24, 36, 0.07);
+  padding: 28px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.currentUserCard p {
+  color: #6b7a8d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.currentUserCard h2 {
+  margin-top: 6px;
+  font-size: 2.8rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.currentUserCard > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.currentUserCard strong {
+  font-size: 1.1rem;
+}
+
+.currentUserCard span {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.currentUserCard small {
+  color: #546079;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  border-radius: 18px;
+  border: 1px solid #e2eaf1;
+  background: #fff;
+  min-height: 68px;
+  display: grid;
+  grid-template-columns: 44px 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(16, 24, 36, 0.04);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.row:hover {
+  border-color: #c4d4e2;
+  box-shadow: 0 6px 18px rgba(16, 24, 36, 0.08);
+}
+
+.currentUserRow {
+  border-color: #f0c9a0 !important;
+  background: linear-gradient(110deg, #fff4ea, #ffe8d6) !important;
+}
+
+.rank {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #2f3d53;
+  text-align: center;
+}
+
+.arenaAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2e3d54, #1a2638);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.userMeta strong {
+  display: block;
+  font-size: 0.98rem;
+}
+
+.userMeta small {
+  margin-top: 3px;
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.row p {
+  font-weight: 800;
+  color: #2a3a50;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.loadMore {
+  margin-top: 20px;
+  min-height: 46px;
+  border-radius: 14px;
+  border: 1px solid #dce6ee;
+  background: #fff;
+  color: #334056;
+  padding: 0 24px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.loadMore:hover {
+  background: #f0f5f9;
+  border-color: #c0d0df;
+}
+
+.loadMore:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorText {
+  margin-top: 14px;
+  color: #c23948;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px) {
+  .currentUserCard {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .currentUserCard > div {
+    margin-left: 0;
+  }
+
+  .row {
+    grid-template-columns: 36px 36px minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 0 14px;
+    min-height: 60px;
+  }
+
+  .filters {
+    padding: 14px 16px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .row {
+    min-height: 0;
+    grid-template-columns: 36px 36px minmax(0, 1fr);
+    align-items: start;
+    row-gap: 4px;
+    padding: 14px;
+  }
+
+  .row p {
+    grid-column: 2 / -1;
+    justify-self: flex-start;
+    text-align: left;
+  }
+
+  .filters span {
+    width: 100%;
+  }
+}
